@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 path = 'C:/Users/User/Images/'
-boxpath = 'C:/Users/User/Images/Boxes/'
+boxpath = 'C:/Users/User/Images/GridImages/'
 start = 0
 x, y, w, h = 0, 0, 0, 0
 foregrnd = 0
