@@ -28,7 +28,7 @@ def VideoCap():
         cv2.imwrite(str(path)+'frame.png', frame)
         prime = cv2.imread(str(path)+'prime.png', 0)
         sub = cv2.subtract(prime,frame)
-        subgrey = cv2.cvtColor(sub, cv2.COLOR BGR2GRAY)
+        subgrey = cv2.cvtColor(sub, cv2.COLOR_BAYER_BG2GRAY)
         ret, thrsh = cv2.threshold(subgrey, 75, 255, cv2.THRESH_BINARY)
         if cv2.countNonZero(thrsh) > 1000:
             foregrnd = 1
